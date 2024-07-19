@@ -11,11 +11,9 @@ import com.hoho.android.usbserial.driver.UsbSerialProber;
  * add IDs to app/src/main/res/xml/usb_device_filter.xml
  */
 class CustomProber {
-
     static UsbSerialProber getCustomProber() {
         ProbeTable customTable = new ProbeTable();
         customTable.addProduct(0x1234, 0xabcd, FtdiSerialDriver.class); // e.g. device with custom VID+PID
         return new UsbSerialProber(customTable);
     }
-
 }
